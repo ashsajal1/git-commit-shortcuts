@@ -90,6 +90,17 @@ _create_wrappers() {
 }
 _create_wrappers
 
+# Soft reset to HEAD~1 by default or specified commit
+greset() {
+  local target="${1:-HEAD~1}"
+  echo "🔄 Resetting to $target (soft reset)..."
+  git reset --soft "$target"
+  echo "✅ Soft reset to $target complete"
+  echo "   - Use 'git status' to see changes"
+  echo "   - Use 'git restore --staged <file>' to unstage specific files"
+  echo "   - Use 'git commit' to create a new commit with the changes"
+}
+
 ghelp() {
   echo "Available git shortcuts:"
   local i=1
