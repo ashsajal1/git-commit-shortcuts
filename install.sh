@@ -8,6 +8,12 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+# Get version
+VERSION="1.0.0"
+if [ -f "VERSION" ]; then
+    VERSION=$(cat VERSION)
+fi
+
 SCRIPT_NAME="git-commit-shortcuts.zsh"
 TARGET_DIR=~/
 TARGET_FILE="${TARGET_DIR}.${SCRIPT_NAME}"
@@ -34,7 +40,7 @@ else
 fi
 
 # Test if the script is working
-echo -e "\n${GREEN}Installation complete!${NC}"
+echo -e "\n${GREEN}✅ Git Commit Shortcuts v${VERSION} installed successfully!${NC}"
 
 # Source the installed script to make ghelp available immediately
 if [ -f ~/.zshrc ]; then
