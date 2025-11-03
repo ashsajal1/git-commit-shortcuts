@@ -35,9 +35,14 @@ fi
 
 # Test if the script is working
 echo -e "\n${GREEN}Installation complete!${NC}"
-echo "To start using the shortcuts, run:"
-echo -e "${YELLOW}source ~/.zshrc${NC}"
-echo -e "\nTo verify installation, run:"
-echo -e "${YELLOW}ghelp${NC} (should show available commands)"
+
+# Source the installed script to make ghelp available immediately
+if [ -f ~/.zshrc ]; then
+    source ~/.zshrc >/dev/null 2>&1 || true
+fi
+
+# Show available commands
+echo -e "\n${YELLOW}Available commands:${NC}"
+ghelp 2>/dev/null || echo -e "${YELLOW}Run 'source ~/.zshrc' or restart your terminal, then run 'ghelp' to see available commands${NC}"
 
 exit 0
