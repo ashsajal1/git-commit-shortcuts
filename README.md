@@ -4,6 +4,16 @@ A convenient Zsh script that provides shortcuts for creating standardized git co
 
 ## Installation
 
+### One-line installation
+
+Run this single command to install and set up everything automatically:
+
+```bash
+bash -c "git clone https://github.com/ashsajal1/git-commit-shortcuts.git ~/.git-commit-shortcuts && cp ~/.git-commit-shortcuts/git-commit-shortcuts.zsh ~/.git-commit-shortcuts.zsh && echo 'source ~/.git-commit-shortcuts.zsh' >> ~/.zshrc && source ~/.zshrc && echo -e '\\n\\033[0;32m✅ Git Commit Shortcuts installed successfully! Run ghelp to see available commands.\\033[0m'"
+```
+
+### Manual Installation
+
 1. Copy the script to your home directory:
    ```bash
    cp git-commit-shortcuts.zsh ~/.git-commit-shortcuts.zsh
