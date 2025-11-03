@@ -44,8 +44,24 @@ bash -c "git clone https://github.com/ashsajal1/git-commit-shortcuts.git ~/.git-
 | `gbuild` | 🏗️   | Build system changes        |
 | `gci`    | 🔁    | CI/CD configuration changes |
 | `grevert`| ⏪   | Revert previous commits     |
+| `greset` | 🔄   | Soft reset to previous commit (HEAD~1 by default) |
 
 ## Usage
+
+### Reset Command
+
+Soft reset to the previous commit (HEAD~1) or a specified commit:
+
+```bash
+# Reset to previous commit
+greset
+
+# Reset to a specific commit
+greset abc123
+
+# Reset 2 commits back
+greset HEAD~2
+```
 
 ### Basic Usage (with subject)
 ```bash
